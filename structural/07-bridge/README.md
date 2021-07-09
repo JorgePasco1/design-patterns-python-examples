@@ -37,5 +37,11 @@ _Structural design pattern that lets you split a large class or a set of closely
 
 ### Pros
 
+* You can create platform-independent classes and apps.
+* The client code works with high-level abstractions. It isn't exposed to the platform details.
+* _Open/Closed Principle_
+* _Single Responsibility Principle_
 
 ### Cons
+
+* The code can get more complicated by applying the pattern to a highly cohesive class.
