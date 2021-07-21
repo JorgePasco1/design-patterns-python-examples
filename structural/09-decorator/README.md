@@ -19,8 +19,8 @@ _Structural design pattern that lets you attach new behaviors to objects by plac
 ### Solution
 
 * Use *Aggregation* or *Composition* instead of *Inheritance*.
-* With this new approach you can easliy substitute the linked helper object with another, changing the behavior of the container at runtime.
-* A wrapper (decorator) is an object that can be linked with some *target* object. The wrapper contains the same set of methods as the target and delegates to it all requests it receives, but it can alter the result by doing something either before of after it passes the request to the target.
+* With this new approach you can easily substitute the linked helper object with another, changing the behavior of the container at runtime.
+* A wrapper (decorator) is an object that can be linked with some *target* object. The wrapper contains the same set of methods as the target and delegates to it all requests it receives, but it can alter the result by doing something either before or after it passes the request to the target.
 
 ![Example Decorator](./example-decorator.png)
 
@@ -31,7 +31,7 @@ _Structural design pattern that lets you attach new behaviors to objects by plac
 1. The **Component** declares the common interface for both wrappers and wrapped objects.
 2. **Concrete Component** is a class of objects being wrapped. It defines basic behavior, which can be altered by decorators.
 3. The **Base Decorator** has a field for referencing a wrapped object. The field's type should be declared as the component interface so it can contain both concrete components and decorators. Delegates all operations to the wrapped objects.
-4. **Concrete Decorators** define extra behaviors that can be added dinamically to components. Override methods of the base decorator and execute their behavior either before or after calling the parent method.
+4. **Concrete Decorators** define extra behaviors that can be added dynamically to components. Override methods of the base decorator and execute their behavior either before or after calling the parent method.
 5. The **Client** can wrap components in multiple layers of decorators, as long as it works with all objects via the component interface.
 
 ## Pros and Cons
