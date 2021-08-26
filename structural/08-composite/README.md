@@ -1,4 +1,4 @@
-# Adapter
+# Composite
 
 ## Concept
 
