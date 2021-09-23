@@ -22,8 +22,23 @@ _Behavioral Design Pattern that lets you define a family of algorithms, put each
 
 ![Strategy Structure](structure.png)
 
+1. The **Context** mantains a reference to one of the concrete strategies and communicates with this object only via the strategy interface.
+2. The **Strategy** interface is common to al concrete strategies. It declares a method the context uses to execute a strategy.
+3. **Concrete Strategies** implement different variations of an algorithm the contxet uses.
+4. The context calls the execution method on the linked strategy object each time it needs to run the algorithm. The context doesn't know what type of strategy it works with or how the algorithm is executed.
+5. The **Client** creates a specific strategy object and passes it to the context. The context exposes a setter which lets clients replace the strategy associates with the context at runtime.
+
 ## Pros and Cons
 
 ### Pros
 
+* You can swap algorithms used inside an object at runtime.
+* You can isolate the implementation details of an algorithm from the code that uses it.
+* You can replace inheritance with composition.
+* *Open/Closed Principle*.
+
 ### Cons
+
+* If you only have a couple of algorithms and they rarely change, there's no real reason to overcomplicate the code.
+* Clients must be aware of the differences between the strategies to be able to select a proper one.
+* A lot of modern programming languages have functional type support that lets you implement different versions of an algorithm inside a set of anonymous functions. Then you could use these functions exactly as you'd have user the strategy objects, but withouth bloating the code.
