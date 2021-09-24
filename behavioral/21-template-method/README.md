@@ -15,7 +15,7 @@ _Behavioral Design Pattern that defines the skeleton of an algorithm in the supe
 * The **Template Method** pattern suggests that you break down an algorithm into a series of steps, turn these steps into a methods, and put a series of calls to these methods inside a single *template method*. These methods may either be `abstract` or have some default implementation.
 * To use this algorithm, the client is supposed to provide its own subclass, implement all abstract steps, and override some of the optional ones if needed (but not the template method itself).
 
-[Example Template Method](./example.png)
+![Example Template Method](./example.png)
 
 * *Abstract steps* must be implemented by every subclass.
 * *Optional steps* already have some default implementation, but still can be overriden if needed.
