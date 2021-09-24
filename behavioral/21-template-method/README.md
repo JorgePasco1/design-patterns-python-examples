@@ -32,13 +32,11 @@ _Behavioral Design Pattern that defines the skeleton of an algorithm in the supe
 
 ### Pros
 
-* You can swap algorithms used inside an object at runtime.
-* You can isolate the implementation details of an algorithm from the code that uses it.
-* You can replace inheritance with composition.
-* *Open/Closed Principle*.
+* You can let clients override only certain parts of a large algorithm, making them less affected by changes that happen to other parts of the algorithm.
+* You can pull the duplicate code into a superclass.
 
 ### Cons
 
-* If you only have a couple of algorithms and they rarely change, there's no real reason to overcomplicate the code.
-* Clients must be aware of the differences between the strategies to be able to select a proper one.
-* A lot of modern programming languages have functional type support that lets you implement different versions of an algorithm inside a set of anonymous functions. Then you could use these functions exactly as you'd have user the strategy objects, but withouth bloating the code.
+* Some clients may be limited by the provided skeleton of an algorithm.
+* Yoy night violate the *Liskov Substitution Principle* by suppressing a default step implementation via a subclass.
+* Template methods tend to be harder to maintain the more steps they have.
