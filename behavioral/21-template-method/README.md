@@ -23,7 +23,7 @@ _Behavioral Design Pattern that defines the skeleton of an algorithm in the supe
 
 ## Structure
 
-![Strategy Structure](structure.png)
+![Template Method Structure](structure.png)
 
 1. The **Abstract Class** declares methods that act as steps of an algorithm, as well as the actual template method which calls these methods in specific order. The steps may either be declared abstract or have some default implementation.
 2. **Concrete Classes** can override all of the steps, but not the template method itself.
